@@ -1,0 +1,133 @@
+<style>
+    .site-footer {
+        width: 100%;
+
+        border-top:
+            1px solid rgba(255,255,255,0.07);
+
+        background: #060b15;
+    }
+
+    .footer-container {
+        width: min(1180px, calc(100% - 40px));
+        margin: auto;
+
+        padding: 34px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .footer-copy {
+        color: #727d92;
+        font-size: 12px;
+    }
+
+    .footer-copy strong {
+        color: #f4f5f8;
+        font-weight: 600;
+    }
+
+    .back-to-top {
+        position: fixed;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        left: max(20px, env(safe-area-inset-left));
+        z-index: 1000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        color: #ffffff;
+        background: #1d55b5;
+        border: 1px solid #568bea;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .back-to-top:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .back-to-top:focus-visible {
+        outline: 2px solid #5599ff;
+        outline-offset: 3px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+
+        .footer-container {
+            width: min(100% - 30px, 1180px);
+
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-copy">
+            © <span id="footerYear">2026</span>
+            <strong>ربى القرني</strong>
+            — جميع الحقوق محفوظة
+        </div>
+
+        <a href="#home"
+           class="back-to-top"
+           id="backToTop"
+           aria-label="العودة للأعلى"
+           title="العودة للأعلى">
+
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20V4M5 11l7-7 7 7" />
+            </svg>
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script>
+(function () {
+
+    const year =
+        document.getElementById("footerYear");
+
+    if (year) {
+        year.textContent =
+            new Date().getFullYear();
+    }
+
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+    if (backToTop) {
+
+        backToTop.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        );
+    }
+
+})();
+</script>

@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="مشروع Velora Beauty - صفحة هبوط عربية لصالون نسائي من تصميم وتطوير ربى القرني."
+    >
+
+    <title>
+        Velora Beauty | ربى القرني
+    </title>
+
+
+    <style>
+
+        /* =========================
+           المتغيرات
+        ========================= */
+
+        :root {
+
+            --bg: #080e1b;
+
+            --surface: #101b2f;
+
+            --surface2: #0d1829;
+
+            --blue: #286ee8;
+
+            --gold: #d9ba75;
+
+            --white: #f4f5f8;
+
+            --muted: #929db1;
+
+            --border:
+                rgba(255, 255, 255, 0.08);
+
+            --container: 1100px;
+
+        }
+
+
+        /* =========================
+           إعدادات عامة
+        ========================= */
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+
+            background:
+
+                radial-gradient(
+
+                    circle at 80% 10%,
+
+                    rgba(40, 110, 232, 0.08),
+
+                    transparent 32%
+
+                ),
+
+                var(--bg);
+
+
+            color: var(--white);
+
+
+            font-family:
+
+                Tahoma,
+
+                Arial,
+
+                sans-serif;
+
+
+            line-height: 1.85;
+
+
+            overflow-x: hidden;
+
+        }
+
+
+        img {
+
+            max-width: 100%;
+
+        }
+
+
+        button,
+        a {
+
+            font-family:
+
+                Tahoma,
+
+                Arial,
+
+                sans-serif;
+
+        }
+
+
+        button {
+
+            -webkit-tap-highlight-color:
+                transparent;
+
+        }
+
+
+        .container {
+
+            width:
+
+                min(
+
+                    var(--container),
+
+                    calc(100% - 40px)
+
+                );
+
+
+            margin: auto;
+
+        }
+
+
+        /* =========================
+           مقدمة المشروع
+        ========================= */
+
+        .project-hero {
+
+            padding:
+
+                150px 0 55px;
+
+        }
+
+
+        .back-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+
+            margin-bottom: 48px;
+
+
+            color: #ffffff;
+
+
+            font-size: 13px;
+
+
+            text-decoration: none;
+
+
+            transition:
+
+                color 0.25s ease,
+
+                transform 0.25s ease;
+
+        
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #568bea;
+    border-radius: 12px;
+    background: #1d55b5;
+    font-weight: 700;
+}
+
+.back-link:focus-visible {
+    outline: 3px solid #e0bd70;
+    outline-offset: 4px;
+}
+
+
+
+
+        .back-link:hover {
+
+            color: white;
+
+
+            transform:
+
+                translateX(4px);
+
+        }
+
+
+        .project-top {
+
+            display: grid;
+
+
+            grid-template-columns:
+
+                1fr auto;
+
+
+            gap: 40px;
+
+
+            align-items: end;
+
+        }
+
+
+        .project-kicker {
+
+            margin-bottom: 16px;
+
+
+            color: var(--gold);
+
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+
+            letter-spacing: 1.2px;
+
+        }
+
+
+        .project-title {
+
+            max-width: 800px;
+
+
+            margin:
+
+                0 0 18px;
+
+
+            color: white;
+
+
+            font-size:
+
+                clamp(
+
+                    42px,
+
+                    8vw,
+
+                    82px
+
+                );
+
+
+            line-height: 1.15;
+
+
+            letter-spacing: -2px;
+
+        }
+
+
+        .project-summary {
+
+            max-width: 730px;
+
+
+            margin: 0;
+
+
+            color: #9ba7ba;
+
+
+            font-size: 14px;
+
+        }
+
+
+        .project-counter {
+
+            min-width: 100px;
+
+
+            text-align: left;
+
+
+            color: #69768c;
+
+
+            font-size: 11px;
+
+        }
+
+
+        /* =========================
+           معرض الصورة
+        ========================= */
+
+        .gallery-section {
+
+            padding:
+
+                30px 0 80px;
+
+        }
+
+
+        .gallery-main {
+
+            position: relative;
+
+
+            overflow: hidden;
+
+
+            height: 600px;
+
+
+            border:
+
+                1px solid var(--border);
+
+
+            border-radius: 26px;
+
+
+            background: #0c1525;
+
+
+            box-shadow:
+
+                0 30px 70px
+
+                rgba(0, 0, 0, 0.28);
+
+        }
+
+
+        .gallery-main img {
+
+            display: block;
+
+
+            width: 100%;
+
+            height: 100%;
+
+
+            object-fit: contain;
+
+
+            object-position:
+                center top;
+
+
+            background: #0c1525;
+
+
+            cursor: zoom-in;
+
+
+            transition:
+
+                transform 0.4s ease;
+
+        }
+
+
+        .gallery-main:hover img {
+
+            transform:
+
+                scale(1.01);
+
+        }
+
+
+        /* =========================
+           زر التكبير
+        ========================= */
+
+        .zoom-button {
+
+            position: absolute;
+
+
+            left: 20px;
+
+            bottom: 20px;
+
+
+            padding:
+
+                11px 16px;
+
+
+            border:
+
+                1px solid
+
+                rgba(255, 255, 255, 0.14);
+
+
+            border-radius: 11px;
+
+
+            background:
+
+                rgba(8, 14, 27, 0.82);
+
+
+            backdrop-filter:
+
+                blur(12px);
+
+
+            -webkit-backdrop-filter:
+
+                blur(12px);
+
+
+            color: white;
+
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+
+            cursor: pointer;
+
+
+            transition:
+
+                background 0.25s ease,
+
+                transform 0.25s ease;
+
+        }
+
+
+        .zoom-button:hover {
+
+            background:
+
+                var(--blue);
+
+
+            transform:
+
+                translateY(-2px);
+
+        }
+
+
+        /* =========================
+           معلومات المشروع
+        ========================= */
+
+        .project-info {
+
+            padding:
+
+                20px 0 100px;
+
+        }
+
+
+        .info-grid {
+
+            display: grid;
+
+
+            grid-template-columns:
+
+                1fr 0.8fr;
+
+
+            gap: 65px;
+
+
+            align-items: start;
+
+        }
+
+
+        .info-label {
+
+            margin-bottom: 13px;
+
+
+            color: var(--gold);
+
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .info-title {
+
+            margin:
+
+                0 0 19px;
+
+
+            color: white;
+
+
+            font-size:
+
+                clamp(
+
+                    26px,
+
+                    4vw,
+
+                    39px
+
+                );
+
+        }
+
+
+        .project-story p {
+
+            margin:
+
+                0 0 16px;
+
+
+            color: #99a5b8;
+
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           لوحة المميزات
+        ========================= */
+
+        .side-panel {
+
+            padding: 27px;
+
+
+            border:
+
+                1px solid var(--border);
+
+
+            border-radius: 23px;
+
+
+            background:
+
+                linear-gradient(
+
+                    145deg,
+
+                    #101b2f,
+
+                    #0c1627
+
+                );
+
+
+            box-shadow:
+
+                0 25px 55px
+
+                rgba(0, 0, 0, 0.18);
+
+        }
+
+
+        .side-panel h3 {
+
+            margin:
+
+                0 0 20px;
+
+
+            color: white;
+
+
+            font-size: 16px;
+
+        }
+
+
+        .feature-list {
+
+            padding: 0;
+
+
+            margin:
+
+                0 0 30px;
+
+
+            list-style: none;
+
+        }
+
+
+        .feature-list li {
+
+            position: relative;
+
+
+            padding:
+
+                11px 22px 11px 0;
+
+
+            border-bottom:
+
+                1px solid
+
+                rgba(255, 255, 255, 0.055);
+
+
+            color: #a8b2c2;
+
+
+            font-size: 12px;
+
+        }
+
+
+        .feature-list li:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .feature-list li::before {
+
+            content: "";
+
+
+            position: absolute;
+
+
+            right: 0;
+
+            top: 21px;
+
+
+            width: 6px;
+
+            height: 6px;
+
+
+            border-radius: 50%;
+
+
+            background:
+
+                var(--blue);
+
+
+            box-shadow:
+
+                0 0 12px
+
+                rgba(40, 110, 232, 0.55);
+
+        }
+
+
+        /* =========================
+           الأدوات المستخدمة
+        ========================= */
+
+        .tools {
+
+            display: flex;
+
+
+            flex-wrap: wrap;
+
+
+            gap: 8px;
+
+        }
+
+
+        .tools span {
+
+            padding:
+
+                7px 10px;
+
+
+            border:
+
+                1px solid
+
+                rgba(255, 255, 255, 0.07);
+
+
+            border-radius: 8px;
+
+
+            background:
+
+                rgba(255, 255, 255, 0.025);
+
+
+            color: #adb7c7;
+
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================
+           المشروع التالي
+        ========================= */
+
+        .next-section {
+
+            padding-bottom:
+
+                90px;
+
+        }
+
+
+        .projects-navigation {
+
+            display: grid;
+
+
+            grid-template-columns:
+
+                1fr auto;
+
+
+            gap: 14px;
+
+        }
+
+
+        .next-project {
+
+            padding: 30px;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+            justify-content: space-between;
+
+
+            gap: 25px;
+
+
+            border:
+
+                1px solid var(--border);
+
+
+            border-radius: 22px;
+
+
+            background: #0d1829;
+
+
+            text-decoration: none;
+
+
+            transition:
+
+                transform 0.3s ease,
+
+                border-color 0.3s ease,
+
+                background 0.3s ease;
+
+        }
+
+
+        .next-project:hover {
+
+            transform:
+
+                translateY(-5px);
+
+
+            border-color:
+
+                rgba(40, 110, 232, 0.30);
+
+
+            background:
+
+                #101d31;
+
+        }
+
+
+        .next-label {
+
+            color: #6f7c91;
+
+
+            font-size: 10px;
+
+        }
+
+
+        .next-name {
+
+            margin-top: 4px;
+
+
+            color: white;
+
+
+            font-size: 19px;
+
+            font-weight: 700;
+
+        }
+
+
+        .next-arrow {
+
+            color: var(--gold);
+
+
+            font-size: 25px;
+
+        }
+
+
+        .all-projects-link {
+
+            min-width: 145px;
+
+
+            padding: 20px;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+            justify-content: center;
+
+
+            border:
+
+                1px solid var(--border);
+
+
+            border-radius: 22px;
+
+
+            background:
+
+                rgba(255, 255, 255, 0.02);
+
+
+            color: #aeb7c8;
+
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+
+            text-decoration: none;
+
+
+            transition:
+
+                color 0.25s ease,
+
+                border-color 0.25s ease,
+
+                transform 0.25s ease;
+
+        }
+
+
+        .all-projects-link:hover {
+
+            color: white;
+
+
+            border-color:
+
+                rgba(217, 186, 117, 0.30);
+
+
+            transform:
+
+                translateY(-4px);
+
+        }
+
+
+        /* =========================
+           تكبير الصورة
+        ========================= */
+
+        .lightbox {
+
+            position: fixed;
+
+
+            z-index: 9999;
+
+
+            inset: 0;
+
+
+            display: none;
+
+
+            align-items: center;
+
+            justify-content: center;
+
+
+            padding: 30px;
+
+
+            background:
+
+                rgba(1, 4, 10, 0.94);
+
+
+            backdrop-filter:
+
+                blur(15px);
+
+
+            -webkit-backdrop-filter:
+
+                blur(15px);
+
+        }
+
+
+        .lightbox.open {
+
+            display: flex;
+
+        }
+
+
+        .lightbox img {
+
+            max-width: 94vw;
+
+            max-height: 88vh;
+
+
+            width: auto;
+
+            height: auto;
+
+
+            object-fit: contain;
+
+
+            border-radius: 15px;
+
+
+            box-shadow:
+
+                0 30px 100px
+
+                rgba(0, 0, 0, 0.6);
+
+        }
+
+
+        .lightbox-close {
+
+            position: absolute;
+
+
+            top: 25px;
+
+            left: 25px;
+
+
+            width: 44px;
+
+            height: 44px;
+
+
+            display: grid;
+
+            place-items: center;
+
+
+            padding: 0;
+
+
+            border:
+
+                1px solid
+
+                rgba(255, 255, 255, 0.12);
+
+
+            border-radius: 50%;
+
+
+            background:
+
+                rgba(255, 255, 255, 0.07);
+
+
+            color: white;
+
+
+            font-size: 23px;
+
+
+            cursor: pointer;
+
+
+            transition:
+
+                background 0.25s ease,
+
+                transform 0.25s ease;
+
+        }
+
+
+        .lightbox-close:hover {
+
+            background:
+
+                rgba(255, 255, 255, 0.14);
+
+
+            transform:
+
+                rotate(5deg);
+
+        }
+
+
+        /* =========================
+           Responsive
+        ========================= */
+
+        @media (max-width: 800px) {
+
+
+            .project-top,
+            .info-grid {
+
+                grid-template-columns:
+
+                    1fr;
+
+            }
+
+
+            .project-counter {
+
+                text-align: right;
+
+            }
+
+
+            .gallery-main {
+
+                height: 430px;
+
+            }
+
+
+            .projects-navigation {
+
+                grid-template-columns:
+
+                    1fr;
+
+            }
+
+
+            .all-projects-link {
+
+                min-height: 70px;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+
+            .container {
+
+                width:
+
+                    min(
+
+                        calc(100% - 28px),
+
+                        var(--container)
+
+                    );
+
+            }
+
+
+            .project-hero {
+
+                padding:
+
+                    130px 0 40px;
+
+            }
+
+
+            .back-link {
+
+                margin-bottom: 33px;
+
+            }
+
+
+            .project-title {
+
+                font-size: 43px;
+
+
+                letter-spacing: -1px;
+
+            }
+
+
+            .project-summary {
+
+                font-size: 12px;
+
+            }
+
+
+            .gallery-section {
+
+                padding-bottom: 60px;
+
+            }
+
+
+            .gallery-main {
+
+                height: 300px;
+
+
+                border-radius: 18px;
+
+            }
+
+
+            .zoom-button {
+
+                left: 12px;
+
+                bottom: 12px;
+
+
+                padding:
+
+                    9px 12px;
+
+
+                font-size: 10px;
+
+            }
+
+
+            .project-info {
+
+                padding-bottom: 70px;
+
+            }
+
+
+            .info-grid {
+
+                gap: 40px;
+
+            }
+
+
+            .side-panel {
+
+                padding: 22px;
+
+            }
+
+
+            .next-project {
+
+                padding: 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         الشريط العلوي
+    ========================== -->
+
+    <div id="siteHeader"></div>
+
+
+    <main>
+
+
+        <!-- =========================
+             مقدمة المشروع
+        ========================== -->
+
+        <section class="project-hero">
+
+
+            <div class="container">
+
+
+                <a
+                    href="index.html#projects"
+                    class="back-link"
+                >
+
+                    → العودة إلى الأعمال
+
+                </a>
+
+
+                <div class="project-top">
+
+
+                    <div>
+
+
+                        <div class="project-kicker">
+
+                            WEB PROJECT
+
+                        </div>
+
+
+                        <h1 class="project-title">
+
+                            Velora Beauty
+
+                        </h1>
+
+
+                        <p class="project-summary">
+
+                            صفحة هبوط عربية لصالون نسائي
+                            تعرض الهوية والخدمات والأسعار
+                            والعروض والأعمال بطريقة أنيقة،
+                            وتختصر طريق الحجز والتواصل
+                            مباشرة عبر واتساب.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="project-counter">
+
+                        03 / 04
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             صورة المشروع
+        ========================== -->
+
+        <section class="gallery-section">
+
+
+            <div class="container">
+
+
+                <div class="gallery-main">
+
+
+                    <img
+                        src="media/img12.png"
+                        alt="واجهة مشروع Velora Beauty"
+                        id="mainGalleryImage"
+                    >
+
+
+                    <button
+                        class="zoom-button"
+                        id="zoomButton"
+                        type="button"
+                    >
+
+                        تكبير الصورة ↗
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             معلومات المشروع
+        ========================== -->
+
+        <section class="project-info">
+
+
+            <div class="container">
+
+
+                <div class="info-grid">
+
+
+                    <!-- الفكرة -->
+
+                    <div class="project-story">
+
+
+                        <div class="info-label">
+
+                            THE IDEA
+
+                        </div>
+
+
+                        <h2 class="info-title">
+
+                            الفكرة والتجربة
+
+                        </h2>
+
+
+                        <p>
+
+                            Velora Beauty هو مشروع صفحة
+                            هبوط عربية من صفحة واحدة
+                            لصالون نسائي، صُمم لعرض هوية
+                            المكان وخدماته وأسعاره
+                            وعروضه بطريقة واضحة وأنيقة.
+
+                        </p>
+
+
+                        <p>
+
+                            الهدف من المشروع هو اختصار
+                            رحلة العميلة؛ حيث تستطيع
+                            التعرف على الصالون، استعراض
+                            الخدمات والأسعار والعروض،
+                            ثم الوصول مباشرة إلى وسيلة
+                            الحجز عبر واتساب.
+
+                        </p>
+
+
+                        <p>
+
+                            تم الاهتمام بتوزيع المحتوى
+                            والصور والمساحات بطريقة
+                            تجعل الصفحة مريحة بصريًا،
+                            مع الحفاظ على سهولة قراءة
+                            المعلومات واستخدام الأزرار
+                            خصوصًا على شاشة الهاتف.
+
+                        </p>
+
+
+                        <p>
+
+                            المشروع عبارة عن صفحة
+                            تعريفية بدون نظام خلفي أو
+                            قاعدة بيانات، ويعتمد على
+                            HTML وCSS وJavaScript لتوفير
+                            تجربة خفيفة وسريعة.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- المميزات -->
+
+                    <aside class="side-panel">
+
+
+                        <h3>
+
+                            أبرز ما يقدّمه
+
+                        </h3>
+
+
+                        <ul class="feature-list">
+
+
+                            <li>
+
+                                صفحة هبوط عربية واحدة واضحة.
+
+                            </li>
+
+
+                            <li>
+
+                                عرض هوية الصالون.
+
+                            </li>
+
+
+                            <li>
+
+                                عرض الخدمات والأسعار.
+
+                            </li>
+
+
+                            <li>
+
+                                قسم للعروض والباقات.
+
+                            </li>
+
+
+                            <li>
+
+                                عرض نماذج من الأعمال.
+
+                            </li>
+
+
+                            <li>
+
+                                حجز سريع عبر واتساب.
+
+                            </li>
+
+
+                            <li>
+
+                                تصميم متجاوب مع الجوال.
+
+                            </li>
+
+
+                            <li>
+
+                                واجهة عربية باتجاه RTL.
+
+                            </li>
+
+
+                        </ul>
+
+
+                        <h3>
+
+                            الأدوات المستخدمة
+
+                        </h3>
+
+
+                        <div class="tools">
+
+
+                            <span>
+
+                                HTML
+
+                            </span>
+
+
+                            <span>
+
+                                CSS
+
+                            </span>
+
+
+                            <span>
+
+                                JavaScript
+
+                            </span>
+
+
+                            <span>
+
+                                RTL
+
+                            </span>
+
+
+                            <span>
+
+                                Responsive Design
+
+                            </span>
+
+
+                        </div>
+
+
+                    </aside>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             المشروع التالي
+        ========================== -->
+
+        <section class="next-section">
+
+
+            <div class="container">
+
+
+                <div class="projects-navigation">
+
+
+                    <a
+                        href="blossom-box.html"
+                        class="next-project"
+                    >
+
+
+                        <div>
+
+
+                            <div class="next-label">
+
+                                المشروع التالي
+
+                            </div>
+
+
+                            <div class="next-name">
+
+                                Blossom Box
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="next-arrow">
+
+                            ←
+
+                        </span>
+
+
+                    </a>
+
+
+                    <a
+                        href="index.html#projects"
+                        class="all-projects-link"
+                    >
+
+                        كل الأعمال
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         التذييل
+    ========================== -->
+
+    <div id="siteFooter"></div>
+
+
+    <!-- =========================
+         نافذة تكبير الصورة
+    ========================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="عرض الصورة بحجم كبير"
+    >
+
+
+        <button
+            type="button"
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="إغلاق الصورة"
+        >
+
+            ×
+
+        </button>
+
+
+        <img
+            src=""
+            alt=""
+            id="lightboxImage"
+        >
+
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+           عناصر الصورة
+        ========================= */
+
+
+        const mainImage =
+            document.getElementById(
+                "mainGalleryImage"
+            );
+
+
+        const zoomButton =
+            document.getElementById(
+                "zoomButton"
+            );
+
+
+        const lightbox =
+            document.getElementById(
+                "lightbox"
+            );
+
+
+        const lightboxImage =
+            document.getElementById(
+                "lightboxImage"
+            );
+
+
+        const lightboxClose =
+            document.getElementById(
+                "lightboxClose"
+            );
+
+
+        /* =========================
+           فتح الصورة
+        ========================= */
+
+
+        function openLightbox() {
+
+
+            if (
+                !mainImage ||
+                !mainImage.src
+            ) {
+
+                return;
+
+            }
+
+
+            lightboxImage.src =
+                mainImage.src;
+
+
+            lightboxImage.alt =
+                mainImage.alt;
+
+
+            lightbox.classList.add(
+                "open"
+            );
+
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
+
+            lightboxClose.focus();
+
+        }
+
+
+        /* =========================
+           إغلاق الصورة
+        ========================= */
+
+
+        function closeLightbox() {
+
+
+            lightbox.classList.remove(
+                "open"
+            );
+
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* زر التكبير */
+
+
+        zoomButton.addEventListener(
+            "click",
+            openLightbox
+        );
+
+
+        /* الضغط على الصورة */
+
+
+        mainImage.addEventListener(
+            "click",
+            openLightbox
+        );
+
+
+        /* زر X */
+
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        /* الضغط خارج الصورة */
+
+
+        lightbox.addEventListener(
+            "click",
+            function (event) {
+
+
+                if (
+                    event.target ===
+                    lightbox
+                ) {
+
+                    closeLightbox();
+
+                }
+
+
+            }
+        );
+
+
+        /* زر Escape */
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+
+                if (
+                    event.key === "Escape" &&
+                    lightbox.classList.contains(
+                        "open"
+                    )
+                ) {
+
+                    closeLightbox();
+
+                }
+
+
+            }
+        );
+
+
+        /* =========================
+           Header / Footer
+        ========================= */
+
+
+        async function loadTemplate(
+            elementId,
+            fileName
+        ) {
+
+
+            const target =
+                document.getElementById(
+                    elementId
+                );
+
+
+            if (!target) {
+
+                return;
+
+            }
+
+
+            try {
+
+
+                const response =
+                    await fetch(
+                        fileName
+                    );
+
+
+                if (!response.ok) {
+
+
+                    throw new Error(
+                        "تعذر تحميل " +
+                        fileName
+                    );
+
+
+                }
+
+
+                const html =
+                    await response.text();
+
+
+                target.innerHTML =
+                    html;
+
+
+                /*
+                    تشغيل JavaScript الموجود
+                    داخل Header أو Footer
+                */
+
+
+                const scripts =
+                    target.querySelectorAll(
+                        "script"
+                    );
+
+
+                scripts.forEach(
+                    function (oldScript) {
+
+
+                        const newScript =
+                            document.createElement(
+                                "script"
+                            );
+
+
+                        Array.from(
+                            oldScript.attributes
+                        ).forEach(
+                            function (attribute) {
+
+
+                                newScript.setAttribute(
+                                    attribute.name,
+                                    attribute.value
+                                );
+
+
+                            }
+                        );
+
+
+                        newScript.textContent =
+                            oldScript.textContent;
+
+
+                        oldScript.replaceWith(
+                            newScript
+                        );
+
+
+                    }
+                );
+
+
+            }
+
+
+            catch (error) {
+
+
+                console.error(
+                    "خطأ أثناء تحميل القالب:",
+                    error
+                );
+
+
+                target.innerHTML =
+                    `
+                    <div
+                        style="
+                            padding:15px;
+                            text-align:center;
+                            color:#929db1;
+                            font-family:Tahoma,Arial,sans-serif;
+                        "
+                    >
+                        تعذر تحميل ${fileName}.
+                        شغّلي الموقع باستخدام Live Server.
+                    </div>
+                    `;
+
+
+            }
+
+
+        }
+
+
+        /* تحميل الشريط العلوي */
+
+
+        loadTemplate(
+            "siteHeader",
+            "header.html"
+        );
+
+
+        /* تحميل التذييل */
+
+
+        loadTemplate(
+            "siteFooter",
+            "footer.html"
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<style>
+    :root {
+        --header-bg: rgba(8, 14, 27, 0.88);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --header-text: #f4f5f8;
+        --header-muted: #8f9aae;
+        --header-blue: #286ee8;
+        --header-gold: #d9ba75;
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 14px 0;
+        background: var(--header-bg);
+        border-bottom: 1px solid var(--header-border);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-container {
+        width: min(1180px, calc(100% - 40px));
+        margin: auto;
+        min-height: 58px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .header-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        flex-shrink: 0;
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+        display: grid;
+        place-items: center;
+
+        border-radius: 14px;
+        box-sizing: border-box;
+        border: 1px solid #d9ba75;
+        background:
+            linear-gradient(
+                135deg,
+                #16243c,
+                #0b1424
+            );
+
+        color: #d9ba75;
+
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.18),
+            inset 0 1px 1px rgba(217,186,117,0.12);
+    }
+
+    .brand-logo svg {
+        width: 32px;
+        height: 32px;
+        display: block;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .brand-name {
+        color: var(--header-text);
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .brand-subtitle {
+        color: var(--header-muted);
+        font-size: 11px;
+    }
+
+    .main-navigation {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .main-navigation a {
+        position: relative;
+
+        padding: 10px 13px;
+        border-radius: 10px;
+
+        color: #aab3c4;
+        font-size: 13px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease;
+    }
+
+    .main-navigation a:hover {
+        color: white;
+        background: rgba(255,255,255,0.055);
+    }
+
+    .main-navigation a::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: 3px;
+
+        width: 0;
+        height: 2px;
+
+        border-radius: 20px;
+        background: var(--header-gold);
+
+        transform: translateX(50%);
+        transition: width 0.25s ease;
+    }
+
+    .main-navigation a:hover::after,
+    .main-navigation a.active::after {
+        width: 22px;
+    }
+
+    .main-navigation a.active {
+        color: #fff;
+    }
+
+    .header-contact {
+        padding: 10px 17px;
+
+        border: 1px solid rgba(40,110,232,0.42);
+        border-radius: 12px;
+
+        background: rgba(40,110,232,0.10);
+        color: #dce8ff;
+
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+
+        transition: 0.25s ease;
+    }
+
+    .header-contact:hover {
+        background: var(--header-blue);
+        border-color: var(--header-blue);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+        display: none;
+
+        width: 44px;
+        height: 44px;
+
+        border: 1px solid var(--header-border);
+        border-radius: 12px;
+
+        background: rgba(255,255,255,0.04);
+
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        margin: 4px auto;
+
+        background: white;
+        border-radius: 10px;
+
+        transition: 0.25s ease;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-container {
+            width: min(100% - 26px, 1180px);
+        }
+
+        .header-contact {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .main-navigation {
+            position: absolute;
+            top: calc(100% + 1px);
+            right: 13px;
+            left: 13px;
+
+            padding: 12px;
+
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius: 0 0 18px 18px;
+
+            background: rgba(8,14,27,0.98);
+
+            box-shadow:
+                0 25px 50px rgba(0,0,0,0.35);
+        }
+
+        .main-navigation.open {
+            display: flex;
+        }
+
+        .main-navigation a {
+            padding: 13px 14px;
+        }
+
+        .main-navigation a::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 470px) {
+
+        .brand-subtitle {
+            display: none;
+        }
+
+        .brand-logo {
+            width: 41px;
+            height: 41px;
+        }
+    }
+</style>
+
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html#home"
+           class="header-brand"
+           aria-label="العودة إلى الرئيسية">
+
+            <div class="brand-logo" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="currentColor" focusable="false">
+                    <path d="M26 8 C29 11 31 15 30 20 C29 28 22 33 13 32 C9 32 6 30 5 27 C11 30 18 27 22 23 C26 19 27 15 24 12 Z" />
+                </svg>
+            </div>
+
+            <div class="brand-text">
+                <span class="brand-name">
+                    ربى القرني
+                </span>
+
+                <span class="brand-subtitle">
+                    تصميم وتطوير رقمي
+                </span>
+            </div>
+
+        </a>
+
+
+        <nav
+            class="main-navigation"
+            id="mainNavigation"
+            aria-label="التنقل الرئيسي"
+        >
+
+            <a href="index.html#home">
+                الرئيسية
+            </a>
+
+            <a href="index.html#projects">
+                الأعمال
+            </a>
+
+            <a href="index.html#about">
+                عني
+            </a>
+
+            
+
+            <a href="index.html#contact">
+                تواصل
+            </a>
+
+        </nav>
+
+
+        <a
+            href="index.html#contact"
+            class="header-contact"
+        >
+            تواصل معي
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<script>
+(function () {
+
+    const toggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("mainNavigation");
+
+    if (!toggle || !navigation) {
+        return;
+    }
+
+    toggle.addEventListener("click", function () {
+
+        const isOpen =
+            navigation.classList.toggle("open");
+
+        toggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+    });
+
+
+    navigation
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    navigation.classList.remove("open");
+
+                    toggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
+            );
+        });
+
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                !navigation.contains(event.target) &&
+                !toggle.contains(event.target)
+            ) {
+                navigation.classList.remove("open");
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            }
+        }
+    );
+
+})();
+</script>

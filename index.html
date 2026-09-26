@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="معرض أعمال ربى القرني - تصميم وتطوير مواقع عربية وتطبيقات رقمية."
+    >
+
+    <title>
+        ربى القرني | Portfolio
+    </title>
+
+
+<style>
+
+/* ==============================
+   المتغيرات
+================================ */
+
+:root {
+
+    --bg: #080e1b;
+    --bg-deep: #050a13;
+
+    --surface: #101b2f;
+    --surface-light: #14233b;
+
+    --blue: #286ee8;
+    --blue-hover: #397cf0;
+
+    --gold: #d9ba75;
+
+    --white: #f4f5f8;
+
+    --muted: #929db1;
+
+    --border:
+        rgba(255,255,255,0.08);
+
+    --container: 1180px;
+
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --radius-sm: 13px;
+}
+
+
+/* ==============================
+   Reset
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(40,110,232,0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(217,186,117,0.035),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color: var(--white);
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==============================
+   عام
+================================ */
+
+.container {
+
+    width:
+        min(
+            var(--container),
+            calc(100% - 40px)
+        );
+
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-small {
+    padding: 75px 0;
+}
+
+
+/* ==============================
+   Typography
+================================ */
+
+.eyebrow {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+}
+
+.eyebrow::before {
+
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.section-heading {
+
+    max-width: 750px;
+
+    margin-bottom: 44px;
+}
+
+.section-heading h2 {
+
+    margin: 0 0 12px;
+
+    color: white;
+
+    font-size:
+        clamp(
+            27px,
+            4vw,
+            42px
+        );
+
+    line-height: 1.35;
+}
+
+.section-heading p {
+
+    max-width: 670px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   Hero
+================================ */
+
+.hero {
+
+    min-height: 720px;
+
+    padding:
+        160px 0 90px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr
+        0.95fr;
+
+    align-items: center;
+
+    gap: 75px;
+}
+
+
+.hero-copy {
+    max-width: 650px;
+}
+
+
+.hero-label {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 24px;
+
+    color: #a9b3c6;
+
+    font-size: 12px;
+}
+
+.hero-label-dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow:
+        0 0 18px rgba(40,110,232,0.7);
+}
+
+
+.hero h1 {
+
+    margin: 0 0 24px;
+
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            73px
+        );
+
+    line-height: 1.25;
+
+    letter-spacing: -2px;
+
+    color: white;
+}
+
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+
+.hero-description {
+
+    max-width: 590px;
+
+    margin: 0 0 31px;
+
+    color: #a5aec0;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+.hero-actions {
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+
+    min-height: 48px;
+
+    padding: 12px 21px;
+
+    border-radius: 13px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        0.25s ease;
+}
+
+
+.button-primary {
+
+    background: var(--blue);
+    color: white;
+
+    box-shadow:
+        0 13px 30px
+        rgba(40,110,232,0.20);
+}
+
+
+.button-primary:hover {
+
+    background: var(--blue-hover);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(40,110,232,0.26);
+}
+
+
+.button-secondary {
+
+    border:
+        1px solid var(--border);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    color: #d7dce5;
+}
+
+
+.button-secondary:hover {
+
+    border-color:
+        rgba(217,186,117,0.35);
+
+    color: white;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.hero-specialties {
+
+    margin-top: 33px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    color: #768196;
+
+    font-size: 11px;
+}
+
+
+.hero-specialties span {
+
+    padding: 7px 11px;
+
+    border:
+        1px solid rgba(255,255,255,0.065);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,0.018);
+}
+
+
+/* ==============================
+   Featured Project
+================================ */
+
+.featured-project {
+
+    position: relative;
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,0.09);
+
+    border-radius: var(--radius-lg);
+
+    background: #0c1525;
+
+    box-shadow:
+        0 35px 85px
+        rgba(0,0,0,0.36);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.featured-project:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(40,110,232,0.36);
+}
+
+
+.featured-project img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.featured-project::after { content: none; }
+
+
+.featured-label {
+
+    position: absolute;
+    z-index: 2;
+
+    top: 22px;
+    right: 22px;
+
+    padding: 8px 11px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50px;
+
+    background:
+        rgba(8,14,27,0.68);
+
+    backdrop-filter:
+        blur(12px);
+
+    color: #dce4f3;
+
+    font-size: 10px;
+}
+
+
+.featured-info {
+    padding: 16px 22px;
+}
+
+
+.featured-info h3 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+}
+
+
+.featured-info p {
+
+    margin: 0;
+
+    color: #acb5c7;
+
+    font-size: 12px;
+}
+
+
+.featured-number {
+
+    color: var(--gold);
+
+    font-size: 10px;
+}
+
+
+/* ==============================
+   Projects
+================================ */
+
+.projects-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(255,255,255,0.012),
+            transparent
+        );
+}
+
+
+.project-filters {
+
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+
+.filter-button {
+
+    padding: 10px 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,0.02);
+
+    color: #8c98ac;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+}
+
+
+.filter-button:hover,
+.filter-button.active {
+
+    border-color:
+        rgba(40,110,232,0.38);
+
+    background:
+        rgba(40,110,232,0.12);
+
+    color: #dce9ff;
+}
+
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.project-card {
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101b2f,
+            #0c1627
+        );
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(40,110,232,0.30);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,0.29);
+}
+
+
+.project-image {
+
+    display: block;
+
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    background: #091221;
+}
+
+
+.project-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.55s ease;
+}
+
+
+.project-card:hover
+.project-image img {
+
+    transform:
+        scale(1.035);
+}
+
+
+.project-type {
+
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    padding: 7px 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+    border-radius: 40px;
+
+    background:
+        rgba(8,14,27,0.80);
+
+    backdrop-filter:
+        blur(8px);
+
+    color: #e9edf5;
+
+    font-size: 9px;
+}
+
+
+.project-content {
+    padding: 16px 20px 18px;
+}
+
+
+.project-meta {
+
+    margin-bottom: 10px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+}
+
+
+.project-title {
+
+    display: inline-block;
+
+    margin: 0 0 9px;
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.project-description {
+
+    min-height: 0;
+
+    margin: 0 0 12px;
+
+    color: #909caf;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+
+.project-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #568bea;
+    border-radius: 12px;
+    background: #1d55b5;
+}
+
+.project-link:focus-visible {
+    outline: 3px solid #e0bd70;
+    outline-offset: 4px;
+}
+
+
+
+
+.project-link:hover {
+
+    color: white;
+    gap: 13px;
+}
+
+
+/* ==============================
+   About
+================================ */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.9fr;
+
+    gap: 75px;
+
+    align-items: start;
+}
+
+
+.about-content h2 {
+
+    margin:
+        0 0 22px;
+
+    color: white;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            49px
+        );
+}
+
+
+.about-content p {
+
+    max-width: 640px;
+
+    margin:
+        0 0 17px;
+
+    color: #9aa5b8;
+
+    font-size: 14px;
+}
+
+
+.skills-panel {
+
+    padding: 28px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101b2f,
+            #0c1627
+        );
+}
+
+
+.skills-panel h3 {
+
+    margin:
+        0 0 23px;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+
+.skill-group {
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+}
+
+
+.skill-group:last-child {
+    border-bottom: 0;
+}
+
+
+.skill-group-title {
+
+    margin-bottom: 11px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+}
+
+
+.skill-tags {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.skill-tags span {
+
+    padding: 7px 9px;
+
+    border:
+        1px solid rgba(255,255,255,0.065);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    color: #b4bdcc;
+
+    font-size: 10px;
+}
+
+
+/* ==============================
+   Services
+================================ */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.service-card {
+
+    min-height: 245px;
+
+    padding: 27px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 22px;
+
+    background:
+        #0d1829;
+
+    transition:
+        0.3s ease;
+}
+
+
+.service-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(217,186,117,0.26);
+
+    background:
+        #101d31;
+}
+
+
+.service-number {
+
+    margin-bottom: 32px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+}
+
+
+.service-card h3 {
+
+    margin:
+        0 0 13px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+
+.service-card p {
+
+    margin: 0;
+
+    color: #8f9caf;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   Contact
+================================ */
+
+.contact-box {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        58px
+        clamp(25px,5vw,60px);
+
+    border:
+        1px solid
+        rgba(40,110,232,0.28);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #10264b,
+            #0d1b33
+        );
+}
+
+
+.contact-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: -100px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(40,110,232,0.12);
+
+    filter: blur(20px);
+}
+
+
+.contact-content {
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.contact-box h2 {
+
+    margin:
+        0 0 12px;
+
+    color: white;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
+}
+
+
+.contact-box p {
+
+    max-width: 580px;
+
+    margin:
+        0 0 27px;
+
+    color: #aab8ce;
+
+    font-size: 13px;
+}
+
+
+.contact-actions {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.email-link {
+
+    padding: 10px;
+
+    color: #d6deec;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+.email-link:hover {
+    color: var(--gold);
+}
+
+
+/* ==============================
+   Animation
+================================ */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ==============================
+   Responsive
+================================ */
+
+@media (max-width: 930px) {
+
+    .hero-grid,
+    .about-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+    }
+
+    .hero {
+        padding-top: 135px;
+    }
+
+    .featured-project {
+        min-height: 0;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 720px) {
+
+    .container {
+        width:
+            min(
+                100% - 28px,
+                var(--container)
+            );
+    }
+
+    .section {
+        padding:
+            75px 0;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            135px 0 65px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                38px,
+                12vw,
+                55px
+            );
+
+        letter-spacing:
+            -1px;
+    }
+
+    .projects-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .project-image {
+        height: 235px;
+    }
+
+    .section-heading {
+        margin-bottom:
+            32px;
+    }
+
+    .project-filters {
+        gap: 7px;
+    }
+
+    .filter-button {
+        font-size: 10px;
+    }
+
+}
+
+
+@media (max-width: 470px) {
+
+    .hero-actions {
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .featured-project {
+        min-height: 0;
+    }
+
+    .contact-actions {
+        align-items: stretch;
+    }
+
+    .email-link {
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body id="home">
+
+
+<!-- =============================
+     Header
+============================== -->
+
+<div id="siteHeader"></div>
+
+
+<main>
+
+
+<!-- =============================
+     Hero
+============================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div class="hero-copy reveal">
+
+                <div class="hero-label">
+
+                    <span class="hero-label-dot"></span>
+
+                    ربى القرني ·
+                    مصممة ومطوّرة مشاريع رقمية
+
+                </div>
+
+
+                <h1>
+
+                    أصمّم تجارب رقمية
+                    <span>تترك أثرًا.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    مواقع عربية وتطبيقات عملية،
+                    أصنعها بهوية واضحة وتفاصيل
+                    تجعل استخدامها أسهل وأجمل.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#projects"
+                        class="button button-primary"
+                    >
+                        اكتشف أعمالي
+                        <span>←</span>
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="button button-secondary"
+                    >
+                        تعرّف عليّ
+                    </a>
+
+                </div>
+
+
+                <div class="hero-specialties">
+
+                    <span>
+                        مواقع ويب
+                    </span>
+
+                    <span>
+                        واجهات عربية
+                    </span>
+
+                    <span>
+                        تطبيقات سطح مكتب
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <article
+                class="featured-project reveal"
+                data-url="shahadati.html"
+                tabindex="0"
+                aria-label="فتح مشروع شهاداتي"
+            >
+                <img
+                    src="media/img13.png"
+                    alt="عرض تطبيق شهاداتي على شاشة مكتبية ولابتوب"
+                    loading="eager"
+                >
+                <div class="featured-info">
+                    <h3>مشروع شهاداتي</h3>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================
+     Projects
+============================== -->
+
+<section
+    class="section projects-section"
+    id="projects"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                PORTFOLIO
+            </div>
+
+            <h2>
+                مشاريع مختارة
+            </h2>
+
+            <p>
+
+                من المتاجر وصفحات الهبوط إلى
+                تطبيق «شهاداتي». افتحي البطاقة
+                للاطلاع على فكرة المشروع
+                وواجهاته.
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="project-filters reveal"
+            role="group"
+            aria-label="تصفية المشاريع"
+        >
+
+            <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+            >
+                كل الأعمال 04
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="web"
+                type="button"
+            >
+                مشاريع الويب 03
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="desktop"
+                type="button"
+            >
+                التطبيقات 01
+            </button>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- شهاداتي -->
+
+            <article
+                class="project-card reveal"
+                data-category="desktop"
+            >
+
+                <a
+                    href="shahadati.html"
+                    class="project-image"
+                >
+
+                    <img
+                        src="media/img7.png"
+                        alt="واجهة تطبيق شهاداتي"
+                        loading="lazy"
+                    >
+
+                    <span class="project-type">
+                        تطبيق سطح مكتب
+                    </span>
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+                        01 / DESKTOP
+                    </div>
+
+                    <a
+                        href="shahadati.html"
+                        class="project-title"
+                    >
+                        شهاداتي
+                    </a>
+
+                    <p class="project-description">
+
+                        مساحة واحدة لحفظ الشهادات
+                        وتنظيمها والبحث فيها،
+                        تعمل محليًا على الجهاز.
+
+                    </p>
+
+                    <a
+                        href="shahadati.html"
+                        class="project-link"
+                    >
+                        وصف المشروع
+                        <span>←</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blue Moon -->
+
+            <article
+                class="project-card reveal"
+                data-category="web"
+            >
+
+                <a
+                    href="blue-moon.html"
+                    class="project-image"
+                >
+
+                    <img
+                        src="media/img3.png"
+                        alt="واجهة متجر Blue Moon"
+                        loading="lazy"
+                    >
+
+                    <span class="project-type">
+                        متجر عطور
+                    </span>
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+                        02 / WEB
+                    </div>
+
+                    <a
+                        href="blue-moon.html"
+                        class="project-title"
+                    >
+                        Blue Moon
+                    </a>
+
+                    <p class="project-description">
+
+                        تجربة متجر عطور بهوية
+                        ليلية فاخرة تجمع العرض
+                        الواضح مع مسار شراء منظم.
+
+                    </p>
+
+                    <a
+                        href="blue-moon.html"
+                        class="project-link"
+                    >
+                        وصف المشروع
+                        <span>←</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Velora -->
+
+            <article
+                class="project-card reveal"
+                data-category="web"
+            >
+
+                <a
+                    href="velora-beauty.html"
+                    class="project-image"
+                >
+
+                    <img
+                        src="media/img12.png"
+                        alt="واجهة مشروع Velora Beauty"
+                        loading="lazy"
+                    >
+
+                    <span class="project-type">
+                        صفحة هبوط لصالون
+                    </span>
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+                        03 / WEB
+                    </div>
+
+                    <a
+                        href="velora-beauty.html"
+                        class="project-title"
+                    >
+                        Velora Beauty
+                    </a>
+
+                    <p class="project-description">
+
+                        صفحة تعريفية أنيقة تعرض
+                        الخدمات والعروض وتختصر
+                        طريق الحجز عبر واتساب.
+
+                    </p>
+
+                    <a
+                        href="velora-beauty.html"
+                        class="project-link"
+                    >
+                        وصف المشروع
+                        <span>←</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blossom -->
+
+            <article
+                class="project-card reveal"
+                data-category="web"
+            >
+
+                <a
+                    href="blossom-box.html"
+                    class="project-image"
+                >
+
+                    <img
+                        src="media/img.png"
+                        alt="واجهة مشروع Blossom Box"
+                        loading="lazy"
+                    >
+
+                    <span class="project-type">
+                        واجهة متجر ورد
+                    </span>
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+                        04 / WEB
+                    </div>
+
+                    <a
+                        href="blossom-box.html"
+                        class="project-title"
+                    >
+                        Blossom Box
+                    </a>
+
+                    <p class="project-description">
+
+                        واجهة متجر ورود وهدايا
+                        بطابع ناعم يضع الصور
+                        والمنتجات في الواجهة.
+
+                    </p>
+
+                    <a
+                        href="blossom-box.html"
+                        class="project-link"
+                    >
+                        وصف المشروع
+                        <span>←</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================
+     About
+============================== -->
+
+<section
+    class="section"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-content reveal">
+
+                <div class="eyebrow">
+                    ABOUT ME
+                </div>
+
+                <h2>
+                    مرحبًا، أنا ربى.
+                </h2>
+
+                <p>
+
+                    أصمّم وأطوّر واجهات ويب عربية
+                    ومشاريع رقمية تهتم بالتفاصيل
+                    وبسهولة الاستخدام على الجوال
+                    وسطح المكتب.
+
+                </p>
+
+                <p>
+
+                    أبدأ بفهم الفكرة، ثم أحوّلها
+                    إلى تصميم واضح وتجربة يمكن
+                    للعميل استخدامها بثقة.
+
+                </p>
+
+            </div>
+
+
+            <div class="skills-panel reveal">
+
+                <h3>
+                    أدواتي ومهاراتي
+                </h3>
+
+
+                <div class="skill-group">
+
+                    <div class="skill-group-title">
+                        التصميم
+                    </div>
+
+                    <div class="skill-tags">
+
+                        <span>
+                            واجهات عربية
+                        </span>
+
+                        <span>
+                            تصميم متجاوب
+                        </span>
+
+                        <span>
+                            تجربة مستخدم
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <div class="skill-group-title">
+                        تطوير الويب
+                    </div>
+
+                    <div class="skill-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>Django</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <div class="skill-group-title">
+                        تطبيقات وبيانات
+                    </div>
+
+                    <div class="skill-tags">
+
+                        <span>PySide6</span>
+                        <span>SQLite</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================
+     Services
+============================== -->
+
+
+
+
+<!-- =============================
+     Contact
+============================== -->
+
+<section
+    class="section-small"
+    id="contact"
+>
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="contact-content">
+
+                <div class="eyebrow">
+                    CONTACT
+                </div>
+
+                <h2>
+                    تواصل معي
+                </h2>
+
+                <p>
+
+                    يسعدني تواصلك عبر واتساب أو البريد الإلكتروني.
+
+                </p>
+
+
+                <div class="contact-actions">
+
+                    <a
+                        href="#"
+                        class="button button-primary"
+                        id="whatsappButton"
+                    >
+                        راسليني عبر واتساب
+                        <span>↗</span>
+                    </a>
+
+
+                    <a
+                        href="mailto:Rmochi248@gmail.com"
+                        class="email-link"
+                    >
+                        Rmochi248@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =============================
+     Footer
+============================== -->
+
+<div id="siteFooter"></div>
+
+
+<script>
+
+/* ===================================
+   تحميل Header / Footer
+=================================== */
+
+async function loadTemplate(
+    elementId,
+    fileName
+) {
+
+    const target =
+        document.getElementById(elementId);
+
+    if (!target) {
+        return;
+    }
+
+    try {
+
+        const response =
+            await fetch(fileName);
+
+        if (!response.ok) {
+            throw new Error(
+                "تعذر تحميل " + fileName
+            );
+        }
+
+        const html =
+            await response.text();
+
+        target.innerHTML = html;
+
+
+        /*
+        تشغيل JavaScript الموجود
+        داخل القالب المحمل.
+        */
+
+        const scripts =
+            target.querySelectorAll("script");
+
+        scripts.forEach(
+            function (oldScript) {
+
+                const newScript =
+                    document.createElement("script");
+
+                Array.from(
+                    oldScript.attributes
+                ).forEach(
+                    function (attribute) {
+
+                        newScript.setAttribute(
+                            attribute.name,
+                            attribute.value
+                        );
+
+                    }
+                );
+
+                newScript.textContent =
+                    oldScript.textContent;
+
+                oldScript.replaceWith(
+                    newScript
+                );
+            }
+        );
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Template loading error:",
+            error
+        );
+
+    }
+}
+
+
+loadTemplate(
+    "siteHeader",
+    "header.html"
+);
+
+loadTemplate(
+    "siteFooter",
+    "footer.html"
+);
+
+
+/* ===================================
+   المشروع المختار
+=================================== */
+
+const featuredProject =
+    document.querySelector(
+        ".featured-project"
+    );
+
+if (featuredProject) {
+
+    const openFeaturedProject =
+        function () {
+
+            const url =
+                featuredProject.dataset.url;
+
+            if (url) {
+                window.location.href = url;
+            }
+        };
+
+
+    featuredProject.addEventListener(
+        "click",
+        openFeaturedProject
+    );
+
+
+    featuredProject.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                openFeaturedProject();
+
+            }
+        }
+    );
+}
+
+
+/* ===================================
+   Project Filters
+=================================== */
+
+const filterButtons =
+    document.querySelectorAll(
+        ".filter-button"
+    );
+
+const projectCards =
+    document.querySelectorAll(
+        ".project-card"
+    );
+
+
+filterButtons.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const filter =
+                    button.dataset.filter;
+
+
+                filterButtons.forEach(
+                    function (item) {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                projectCards.forEach(
+                    function (card) {
+
+                        const category =
+                            card.dataset.category;
+
+                        const shouldShow =
+                            filter === "all" ||
+                            category === filter;
+
+
+                        if (shouldShow) {
+
+                            card.style.display =
+                                "";
+
+                        }
+
+                        else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* ===================================
+   Scroll Reveal
+=================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                            .classList
+                            .add("visible");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    function (element) {
+
+        observer.observe(
+            element
+        );
+
+    }
+);
+
+
+/* ===================================
+   WhatsApp
+=================================== */
+
+/*
+ضعي الرقم بصيغة دولية بدون +
+مثال سعودي:
+9665XXXXXXXX
+
+تركته فارغًا لأنك لم تزوديني
+برقم الواتساب.
+*/
+
+const WHATSAPP_NUMBER = "0558325505";
+
+
+const whatsappMessage =
+    "مرحبًا ربى، أرغب في التواصل معك.";
+
+
+const whatsappButton =
+    document.getElementById(
+        "whatsappButton"
+    );
+
+
+if (whatsappButton) {
+
+    whatsappButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            const encodedMessage =
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            let url;
+
+
+            if (
+                WHATSAPP_NUMBER.trim()
+            ) {
+
+                url =
+                    "https://wa.me/" +
+                    WHATSAPP_NUMBER +
+                    "?text=" +
+                    encodedMessage;
+
+            }
+
+            else {
+
+                /*
+                إذا لم يوضع رقم:
+                يفتح واتساب مع الرسالة
+                ويتيح اختيار المحادثة.
+                */
+
+                url =
+                    "https://wa.me/?text=" +
+                    encodedMessage;
+
+            }
+
+
+            window.open(
+                url,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
