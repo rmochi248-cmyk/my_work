@@ -1,0 +1,57 @@
+/* Language controls inherit the existing header palette. */
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    color: #96a3b8;
+}
+.language-switch button {
+    min-width: 36px;
+    min-height: 44px;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: #dce9ff;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+.language-switch button[aria-pressed="true"] {
+    border-color: #568bea;
+    background: #1d55b5;
+    color: white;
+}
+.language-switch button:focus-visible {
+    outline: 2px solid #d9ba75;
+    outline-offset: 2px;
+}
+html[dir="ltr"] .feature-list li { padding: 11px 0 11px 22px; }
+html[dir="ltr"] .feature-list li::before { right: auto; left: 0; }
+html[dir="ltr"] .project-type { right: auto; left: 16px; }
+html[dir="ltr"] .project-counter { text-align: right; }
+html[dir="ltr"] .next-arrow,
+html[dir="ltr"] .project-link > span:not([data-i18n]),
+html[dir="ltr"] .hero-actions a > span:not([data-i18n]) {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+html[dir="ltr"] .hero h1 { letter-spacing: -1px; }
+.hero-content, .project-content, .contact-content, .brand-text { min-width: 0; }
+html[dir="ltr"] .project-title { overflow-wrap: anywhere; }
+@media (max-width: 1000px) and (min-width: 851px) {
+    .site-header .header-container { gap: 12px; }
+    html[dir="ltr"] .header-contact { padding-inline: 12px; }
+}
+@media (max-width: 850px) {
+    .site-header .header-container { gap: 10px; }
+    .language-switch { margin-inline-start: auto; }
+    html[dir="ltr"] .project-counter { text-align: left; }
+}
+@media (max-width: 470px) {
+    .site-header .header-brand { gap: 7px; }
+    .language-switch { gap: 2px; }
+    .language-switch button { min-width: 30px; }
+    html[dir="ltr"] .brand-name { font-size: 13px; }
+}
